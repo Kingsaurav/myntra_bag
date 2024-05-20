@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra bag</title>
+    <style>
+        .bag-btn{
+            background-color: lightgreen;
+            padding-top:5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border:none;
+            border-radius: 10px;
+
+        }
+        .whishlist-btn{
+            padding:5px 39px;
+            border:2px solid black;
+            border-radius: 10px;
+            text-transform: uppercase;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <button class="bag-btn" onclick="cartQuantity=cartQuantity+1;
+      document.querySelector('#bag-summary').innerHTML=`Your Bag has ${cartQuantity} items.`;">Add to Bag</button>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+    <button class=" whishlist-btn" onclick="cartQuantity=cartQuantity-1;
+      document.querySelector('#bag-summary').innerHTML=`Your Bag has ${cartQuantity} items.`;">Move to Whishlist</button>
+    <!--  -->
+    <!--  -->
+    <button class="bag-btn" onclick="cartQuantity=cartQuantity+2;
+      document.querySelector('#bag-summary').innerHTML=`Your Bag has ${cartQuantity} items.`;"> Add 1+1 Sale Item</button>
+      <!--  -->
+      <!-- target the h1 tag to display the number of items -->
+    <h1 id="bag-summary"></h1>
+</main>
+<script>
+    let cartQuantity=0;
+    document.querySelector('#bag-summary').innerHTML=`Your Bag has ${cartQuantity} items.`
+
+</script>
+    
+</body>
+</html>
